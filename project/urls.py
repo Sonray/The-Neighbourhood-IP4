@@ -21,7 +21,8 @@ from app import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'',include('app.urls')),
-    url(r'^accounts/', include('django_registration.backends.activation.urls')),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
+    url(r'^accounts/', include('django_registration.backends.one_step.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^logout/$', views.logout, name='user_logout'),
 ]

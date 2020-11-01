@@ -22,10 +22,8 @@
 
     </div>
     <div class="col-md-4">
-            <br>
-
-
-    <br>
+      <br>
+      <br>
       {% if form.errors %}
         <p> Password or Username is incorrect </p>
       {% endif %}
@@ -33,14 +31,11 @@
 
         <div class="panel-heading">
 
-
-
-
           <div class="card" style="width:100%;" >
-                      <h1 id="login" class="text-center">The Watchtower</h1>
+            <h1 id="login" class="text-center">The Watchtower</h1>
 
-  <ul class="list-group list-group-flush" style="width:90%; padding-left:30px;">
-<form  action="/accounts/login/" method="post">
+        <ul class="list-group list-group-flush" style="width:90%; padding-left:30px;">
+        <form  action="/accounts/login/" method="post">
             {% csrf_token %}
             {% bootstrap_form form%}
 
@@ -50,7 +45,7 @@
 
             <input type="hidden" name="next" value="{{next}}">
 
-          </form>
+        </form>
     </li>
 
   </ul>
@@ -60,7 +55,8 @@
           <div class="card" style="width:100%;">
 
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">          Don't have an account? <a href="/accounts/register " class="forgot ">Sign up </a>
+    <li class="list-group-item">
+        Don't have an account? <a href="/accounts/register/ " class="forgot ">Sign up </a>
     </li>
   </ul>
 
