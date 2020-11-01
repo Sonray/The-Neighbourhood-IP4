@@ -6,10 +6,10 @@
 Allows Users to store their project and allows for reviews o be conducted on the said projects.
 
 #### link to site
-https://github.com/Sonray/The-share-IP3.git
+https://github.com/Sonray/The-Neighbourhood-IP4.git
 
 #### live link
-https://awards9000.herokuapp.com/
+
 
 ## About Author
 Author's name is David Okwacha
