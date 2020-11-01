@@ -139,3 +139,8 @@ def search_results(request):
     else:
         message = "Please enter a search term"
         return render(request, 'search.html', {"message": message})
+
+@login_required
+def logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse("homepage"))
