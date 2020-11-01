@@ -72,17 +72,6 @@ class Neighborhood(models.Model):
         neighborhoods = cls.objects.all()
         return neighborhoods
 
-# this should be in the business model
-    # @classmethod
-    # def get_neighborhood_businesses(cls, neighborhood_id):
-    #     businesses=Neighborhood.objects.filter(neighborhood_id=id)
-    #     return businesses
-
-    # @classmethod
-    # def get_profile_image(cls, profile):
-    #     neighborhoods = Neighborhood.objects.filter(user_profile__pk=profile)
-    #     return neighborhoods
-
     @classmethod
     def get_neighborhood_by_id(cls, id):
         neighborhood = Neighborhood.objects.filter(id=Neighborhood.id)
@@ -99,8 +88,7 @@ class Business(models.Model):
     description = HTMLField(blank=True)
     email = models.EmailField(max_length=70, blank=True)
     biz_owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    biz_hood = models.ForeignKey(
-        Neighborhood, on_delete=models.CASCADE, related_name='biz', null=True)
+    biz_hood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE, related_name='biz', null=True)
 
     '''
     this is added to ensure the linter has no errors saying class has no objects member in VS Code IDE
@@ -132,8 +120,8 @@ class Join(models.Model):
     '''
 Updating user location each time they join or leave a neghborhood	
 '''
-    user_id = models.OneToOneField(User)
-    hood_id = models.ForeignKey(Neighborhood)
+    user_id = models.OneToOneField(User, on_delete=models.CASCADE)
+    hood_id = models.ForeignKey(Neighborhood, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.user_id
@@ -144,8 +132,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='images/', blank=True)
     description = HTMLField(blank=True)
     poster = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    post_hood = models.ForeignKey(
-        Neighborhood, on_delete=models.CASCADE, null=True)
+    post_hood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE, null=True)
     date = models.DateTimeField(auto_now_add=True)
 
     '''
