@@ -1,44 +1,66 @@
-# David Okwacha 
 
-## Award app
+# Neighbour-Hood
+This application was built by Django version 3.1.2 a python framework.
+
+2th November 2020
+By David Okwacha
 
 ## Description
-Allows Users to store their project and allows for reviews o be conducted on the said projects.
 
-#### link to site
-https://github.com/Sonray/The-Neighbourhood-IP4.git
-
-#### live link
-
-
-## About Author
-Author's name is David Okwacha
-I have worked on some major projects in web development which include;
-1 . Fitness-hub
-2 . Group DAlex
-3 . Birth-Break
-4 . Delani-studio
+The Watchtower is a neighborhood watch web application that allows you to be aware about everything happening in your neighborhood. From contact information of different handyman to meeting announcements or even alerts..
 
 ## Setup/Installation Requirements
-Set up a web browser and you are good to go. Launch the website, enter your name, email and 
-message to inform the company
+Install python version 3.6.
+
+Install Heroku that helps to deploy your application.
+
+Clone https://github.com/Sonray/The-Neighbourhood-IP4.git
+
+Atleast have a computer or a laptop
+
+Have an internet connection
+
+Live app here https://github.com/Sonray/The-Neighbourhood-IP4.git
+
+install Django
+
+$ pip install django
+
+Create a virtual environment
+
+python3 -m venv --without-pip virtual
+
+$ source virtual/bin/activate
+
+Install gunicorn: (virtual)
+
+$ pip install gunicorn
 
 ## BDD
-News app is a BDD that allows Users to store their project and allows for reviews o be conducted on the said projects.
 
-### Technologies Used
-#### 1. HTML
-#### 2. CSS
-#### 4. Bootsrap
-#### 5. python
-#### 6. django
-#### 7. javascript
+As a user of the application i should be able to:
 
+*Sign in with the application to start using. 
+*Set up a profile about me and a general location and my neighborhood name. 
+*Find a list of different businesses in my neighborhood. 
+*Find Contact Information for the health department and Police authorities near my neighborhood. *Create Posts that will be visible to everyone in my neighborhood. 
+*Change My neighborhood when I decide to move out. *Only view details of a single neighborhood.
+
+## Technologies Used
+
+Python version 3.8.5
+Django version 3.1.2
+Bootstrap 4
+Postgres Database
+Postgres
+HTML & CSS
+JQUERY
+Heroku
 
 ## Support and contact details
+
 In case you run into any issues or have questions, ideas or concerns. Contact David Okwacha
 
 E-mail - davidokwacha@gmail.com
 Facebook - David Okwacha
 Youtube - David Okwacha
-
